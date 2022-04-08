@@ -65,7 +65,7 @@ $(document).ready(function() {
     newOrder.orderPrice();
     let totalCost = [];
     totalCost.push(newOrder.price)
-    console.log(totalCost)
+    console.log(totalCost)    
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
     let showOrder = ("<p> You're order is: a " +inputtedSize + " " +inputtedToppingOne + " " + inputtedToppingTwo + " Pizza.</p>")
     createTags(showOrder)
@@ -77,4 +77,14 @@ function createTags(tag) {
   const div = document.createElement("div");
   $(div).append(tag);
   $("#output").append(div);
+}
+
+function displayPizzaOrder(pizzaOrder) {
+  let yourOrder = $("#output");
+  let htmlForPizzaOrder = "" ;
+  Object.keys(pizzaOrder.pizzas).forEach(function(key) {
+    const pizza = pizzaOrder.findId(key);
+    htmlForPizzaOrder += "<p id=" + pizza.id + ">" + pizza.toppingOne + " " + pizza.toppingTwo + " " + pizza.size + ".</p>"; 
+  });
+  yourOrder.html(htmlForPizzaOrder);
 }

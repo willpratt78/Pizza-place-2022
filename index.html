@@ -13,14 +13,14 @@
       <h1>Put in your pizza order</h1>
     </div>
     <form id="user-input">
-      <label for="toppingOne">Select your first topping</label>
+      <label for="toppingOne">Select a standard topping for an extra $2</label>
       <select class="form-control" id="toppingOne">
         <option>Xtra-cheese</option>
         <option>Garlic</option>
         <option>Banana-peppers</option>
         <option> </option>
       </select>
-      <label for="toppingTwo">Select your second topping</label>
+      <label for="toppingTwo">Select a premium topping for an extra $3</label>
       <select class="form-control" id="toppingTwo">
         <option>Pineapple</option>
         <option>Ham</option>
@@ -29,10 +29,10 @@
       </select>
       <label for="size">Select your size</label>
       <select class="form-control" id="size">
-        <option>Xtra Large</option>
-        <option>Large</option>
-        <option>Medium</option>
-        <option>Small</option>
+        <option value="Xtra Large">Xtra Large $15</option>
+        <option value="Large">Large $12</option>
+        <option value="Medium">Medium $10</option>
+        <option value="Small">Small $6</option>
       </select>
       <button type="submit" class="bttn">Submit your Order!</button>
     </form>

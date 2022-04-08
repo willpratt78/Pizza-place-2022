@@ -3,3 +3,14 @@ body {
   background-color: red;
 }
 
+#toppingOne {
+  width: 25%;
+}
+
+#toppingTwo {
+  width: 25%;
+}
+
+#size {
+  width: 25%;
+}
