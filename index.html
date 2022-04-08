@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/scripts.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css"> 
+  <title>Will's Pizza Parlor</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1>Put in your pizza order</h1>
+    </div>
+    <form id="user-input">
+      <label for="toppingOne">Select your first topping</label>
+      <select class="form-control" id="toppingOne">
+        <option>Anchovie</option>
+      </select>
+      <label for="toppingTwo">Select your second topping</label>
+      <select class="form-control" id="toppingTwo">
+        <option>Pineapple</option>
+      </select>
+      <label for="size">Select your size</label>
+      <select class="form-control" id="size">
+        <option>Large</option>
+      </select>
+      <button type="submit" class="btn btn-lg">Submit your Order!</button>
+    </form>
+    <div id="output"></div>
+  </div>
+</body>
+</html>

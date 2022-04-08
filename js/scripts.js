@@ -49,3 +49,5 @@ Pizza.prototype.orderPrice = function () {
   }
   return this.price;
 }
+
+// UI Logic
