@@ -3,10 +3,6 @@
 function Pizza(toppingOne, toppingTwo, size) {
   this.pizzas = {}
   this.id = 0;
-  this.toppingOne = toppingOne;
-  this.toppingTwo = toppingTwo;
-  this.size = size;
-  this.price = 0;
 }
 
 Pizza.prototype.addPizza = function (order) {
@@ -27,7 +23,16 @@ Pizza.prototype.findId = function(id) {
   return false;
 }
 
-Pizza.prototype.orderPrice = function () {
+//BI for CustomerInput
+
+function CustomerInput (toppingOne,toppingTwo,size ){
+  this.toppingOne = toppingOne;
+  this.toppingTwo = toppingTwo;
+  this.size = size;
+  this.price = 0;
+}
+
+CustomerInput.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
   let toppingTwo = this.toppingTwo;
   let size = this.size;
@@ -61,11 +66,10 @@ $(document).ready(function() {
     const inputtedToppingOne = $("#toppingOne").val();
     const inputtedToppingTwo = $("#toppingTwo").val();
     const inputtedSize = $("#size").val();
-    let newOrder = new Pizza(inputtedToppingOne, inputtedToppingTwo, inputtedSize);
+    let newOrder = new CustomerInput(inputtedToppingOne, inputtedToppingTwo, inputtedSize);
     newOrder.orderPrice();
-    let totalCost = [];
-    totalCost.push(newOrder.price)
-    console.log(totalCost)    
+    // let totalCost = [];
+    // totalCost.push(newOrder.price)
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
     let showOrder = ("<p> You're order is: a " +inputtedSize + " " +inputtedToppingOne + " " + inputtedToppingTwo + " Pizza.</p>")
     createTags(showOrder)
@@ -79,12 +83,12 @@ function createTags(tag) {
   $("#output").append(div);
 }
 
-function displayPizzaOrder(pizzaOrder) {
-  let yourOrder = $("#output");
-  let htmlForPizzaOrder = "" ;
-  Object.keys(pizzaOrder.pizzas).forEach(function(key) {
-    const pizza = pizzaOrder.findId(key);
-    htmlForPizzaOrder += "<p id=" + pizza.id + ">" + pizza.toppingOne + " " + pizza.toppingTwo + " " + pizza.size + ".</p>"; 
-  });
-  yourOrder.html(htmlForPizzaOrder);
-}
+// function displayPizzaOrder(pizzaOrder) {
+//   let yourOrder = $("#output");
+//   let htmlForPizzaOrder = "" ;
+//   Object.keys(pizzaOrder.pizzas).forEach(function(key) {
+//     const pizza = pizzaOrder.findId(key);
+//     htmlForPizzaOrder += "<p id=" + pizza.id + ">" + pizza.toppingOne + " " + pizza.toppingTwo + " " + pizza.size + ".</p>"; 
+//   });
+//   yourOrder.html(htmlForPizzaOrder);
+// }
