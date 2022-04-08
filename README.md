@@ -4,15 +4,8 @@ Describe: Pizza()
 
 Test: "It should return a Pizza object with two properties for toppings and size"
 Code: 
-const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
-
-Describe: customerChoice ()
-
-Text: "It should return a list of toppings"
-code: 
-let toppings = new customerChoice ("anchovies", "pineapple", "large")
-Expected Output: customerChoice(toppingOne: "anchovies",toppingTwo "pineapple", size: "large")
+const myPizza = new Pizza("anchovies", "pineapple", "medium");
+Expected Output: Pizza {id:0 toppingOne: "anchovies", toppingTwo: "pineapple", size: "medium" }
 
 Describe: Pizza.prototype.addId = function()
 
