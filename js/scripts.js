@@ -32,18 +32,23 @@ Pizza.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
   let toppingTwo = this.toppingTwo;
   let size = this.size;
-  if (toppingOne === "anchovies"){
+  console.log(toppingOne)
+  if (toppingOne === "Xtra cheese" ||toppingOne ===  "Garlic" ||toppingOne ===  "Banana peppers"){
     this.price += 2;
   }else {
     this.price += 0;
   }
-  if (toppingTwo === "pineapple") {
+  if (toppingTwo === "Pineapple" ||toppingTwo === "Garlic" ||toppingTwo === "Banana peppers") {
     this.price += 3;
   }else {
     this.price += 0;
   }
-  if (size === "large") {
-    this.price += 10;
+  if (size === "Xtra Large") {
+    this.price += 15;
+  }else if (size === "Large") {
+    this.price +=12;
+  }else if (size === "Medium") {
+    this.price +=10;
   }else {
     this.price +=6;
   }
@@ -58,7 +63,7 @@ $(document).ready(function() {
     const inputtedToppingOne = $("#toppingOne").val();
     const inputtedToppingTwo = $("#toppingTwo").val();
     const inputtedSize = $("#size").val();
-    let newOrder = new Pizza(inputtedSize, inputtedToppingOne, inputtedToppingTwo);
+    let newOrder = new Pizza(inputtedToppingOne, inputtedToppingTwo, inputtedSize);
     newOrder.orderPrice();
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
     let showOrder = ("<p> You're order is: a " +inputtedSize + " with " +inputtedToppingOne + " and " + inputtedToppingTwo + ".</p>")
