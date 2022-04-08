@@ -1,3 +1,40 @@
+# _Pizza Shop_
+
+#### By _Will Pratt_
+
+#### _This will let you imput an order at a pizza shop_
+
+## Technologies Used
+
+* HTML
+* Javascript
+* CSS
+
+## Description
+
+_Upon entering your order you get a return of the order you've made and the cost of the order_
+
+## Setup/Installation Requirements
+
+* Clone Repository onto your local maching
+* Open the directory named portfolio
+* Open index file
+
+## Known Bugs
+
+* No known bugs at this time
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+
+Copyright (c) 4/8/22 _William Pratt_
+
+
+
+## TDD
+
 ``` js
 
 Describe: Pizza()
