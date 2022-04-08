@@ -55,8 +55,20 @@ Pizza.prototype.orderPrice = function () {
 $(document).ready(function() {
   $("form#user-input").submit(function(event) {
     event.preventDefault();
-    const inputtedToppingOne = toLowerCase($("#toppingOne").val());
-    const inputtedToppingTwo = toLowerCase($("#toppingTwo").val());
-    const inputtedSize = toLowerCase($("#size").val());
+    const inputtedToppingOne = $("#toppingOne").val();
+    const inputtedToppingTwo = $("#toppingTwo").val();
+    const inputtedSize = $("#size").val();
+    let newOrder = new Pizza(inputtedSize, inputtedToppingOne, inputtedToppingTwo);
+    newOrder.orderPrice();
+    let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
+    let showOrder = ("<p> You're order is: a " +inputtedSize + " with " +inputtedToppingOne + " and " + inputtedToppingTwo + ".</p>")
+    createTags(showOrder)
+    createTags(endPrice)
   })
 }) 
+
+function createTags(tag) {
+  const div = document.createElement("div");
+  $(div).append(tag);
+  $("#output").append(div);
+}
