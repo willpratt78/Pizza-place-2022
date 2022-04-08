@@ -9,7 +9,6 @@ function Pizza(toppingOne, toppingTwo, size) {
   this.price = 0;
 }
 
-
 Pizza.prototype.addPizza = function (order) {
   order.id = this.addId();
   this.pizzas[order.id] = order
@@ -32,7 +31,6 @@ Pizza.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
   let toppingTwo = this.toppingTwo;
   let size = this.size;
-  console.log(toppingOne)
   if (toppingOne === "Xtra cheese" ||toppingOne ===  "Garlic" ||toppingOne ===  "Banana peppers"){
     this.price += 2;
   }else {
@@ -65,6 +63,9 @@ $(document).ready(function() {
     const inputtedSize = $("#size").val();
     let newOrder = new Pizza(inputtedToppingOne, inputtedToppingTwo, inputtedSize);
     newOrder.orderPrice();
+    let totalCost = [];
+    totalCost.push(newOrder.price)
+    console.log(totalCost)
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
     let showOrder = ("<p> You're order is: a " +inputtedSize + " with " +inputtedToppingOne + " and " + inputtedToppingTwo + ".</p>")
     createTags(showOrder)
