@@ -51,3 +51,12 @@ Pizza.prototype.orderPrice = function () {
 }
 
 // UI Logic
+
+$(document).ready(function() {
+  $("form#user-input").submit(function(event) {
+    event.preventDefault();
+    const inputtedToppingOne = toLowerCase($("#toppingOne").val());
+    const inputtedToppingTwo = toLowerCase($("#toppingTwo").val());
+    const inputtedSize = toLowerCase($("#size").val());
+  })
+}) 
