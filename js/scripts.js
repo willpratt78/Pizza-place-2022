@@ -31,12 +31,12 @@ Pizza.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
   let toppingTwo = this.toppingTwo;
   let size = this.size;
-  if (toppingOne === "Xtra cheese" ||toppingOne ===  "Garlic" ||toppingOne ===  "Banana peppers"){
+  if (toppingOne === "Xtra-cheese" ||toppingOne ===  "Garlic" ||toppingOne ===  "Banana-peppers"){
     this.price += 2;
   }else {
     this.price += 0;
   }
-  if (toppingTwo === "Pineapple" ||toppingTwo === "Garlic" ||toppingTwo === "Banana peppers") {
+  if (toppingTwo === "Pineapple" ||toppingTwo === "Ham" ||toppingTwo === "Blue-cheese") {
     this.price += 3;
   }else {
     this.price += 0;
@@ -67,7 +67,7 @@ $(document).ready(function() {
     totalCost.push(newOrder.price)
     console.log(totalCost)
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
-    let showOrder = ("<p> You're order is: a " +inputtedSize + " with " +inputtedToppingOne + " and " + inputtedToppingTwo + ".</p>")
+    let showOrder = ("<p> You're order is: a " +inputtedSize + " " +inputtedToppingOne + " " + inputtedToppingTwo + " Pizza.</p>")
     createTags(showOrder)
     createTags(endPrice)
   })
