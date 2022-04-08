@@ -1,12 +1,19 @@
 //BL for Pizza
 
 function Pizza(toppingOne, toppingTwo, size) {
-  this.pizza = {}
+  this.pizzas = {}
   this.id = 0;
   this.toppingOne = toppingOne;
   this.toppingTwo = toppingTwo;
   this.size = size;
 }
+
+
+Pizza.prototype.addPizza = function (order) {
+  order.id = this.addId();
+  this.pizzas[order.id] = order
+}
+
 
 Pizza.prototype.addId = function () {
   this.id += 1

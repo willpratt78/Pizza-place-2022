@@ -18,7 +18,7 @@ Describe: Pizza.prototype.addPizza = function()
 
 Text:"It should assign the id to the pizza that's been ordered"
 code:
-myPizza.addPizza();
+myPizza.addPizza(myPizza);
 expected output: "anchovies" "pineapple" "large" 1
 
 Describe: Pizza.prototype.findId = function()
