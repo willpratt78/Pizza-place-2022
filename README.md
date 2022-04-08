@@ -25,7 +25,7 @@ Describe: Pizza.prototype.findId = function()
 
 Text: "It should find the id of a given item"
 Code:
-myPizza.findId();
+myPizza.findId(1);
 expected output: 1
 
 

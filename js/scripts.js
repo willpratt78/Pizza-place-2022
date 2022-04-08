@@ -19,3 +19,11 @@ Pizza.prototype.addId = function () {
   this.id += 1
   return this.id
 }
+
+Pizza.prototype.findId = function(id) {
+  debugger;
+  if (this.pizzas[id] != undefined) {
+    return this.pizzas[id];
+  }
+  return false;
+}
