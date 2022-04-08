@@ -29,7 +29,7 @@ myPizza.findId();
 expected output: 1
 
 
-Describe: CustomerChoice.prototype.orderPrice = function ()
+Describe: Pizza.prototype.orderPrice = function ()
 
 Text: "It should return the total price for the pizza ordered"
 Code:

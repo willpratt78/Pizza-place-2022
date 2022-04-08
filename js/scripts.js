@@ -7,3 +7,8 @@ function Pizza(toppingOne, toppingTwo, size) {
   this.toppingTwo = toppingTwo;
   this.size = size;
 }
+
+Pizza.prototype.addId = function () {
+  this.id += 1
+  return this.id
+}
