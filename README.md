@@ -14,18 +14,32 @@ code:
 let toppings = new customerChoice ("anchovies", "pineapple", "large")
 Expected Output: customerChoice(toppingOne: "anchovies",toppingTwo "pineapple", size: "large")
 
-Describe: Pizza.prototype.add = function()
-
-Text: "It should return the toppings/size added together"
-Code:
-myPizza.add();
-Expected Output: ("anchovies" "pineapple" "large")
-
 Describe: Pizza.prototype.addId = function()
 
-Text: "It shold return the id of the pizza being ordered"
+Text: "It shold increase the id of the pizza being ordered by 1"
 Code:
 myPizza.addId();
 expected Output: 1
 
+Describe: Pizza.prototype.addPizza = function()
+
+Text:"It should assign the id to the pizza that's been ordered"
+code:
+myPizza.addPizza();
+expected output: "anchovies" "pineapple" "large" 1
+
+Describe: Pizza.prototype.findId = function()
+
+Text: "It should find the id of a given item"
+Code:
+myPizza.findId();
+expected output: 1
+
+
+Describe: CustomerChoice.prototype.orderPrice = function ()
+
+Text: "It should return the total price for the pizza ordered"
+Code:
+myPizza.orderPrice("anchovies", "pineapple", "large")
+Expected output: myPizza(15)
 ```
