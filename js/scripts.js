@@ -1,6 +1,6 @@
 //BL for Pizza
 
-function Pizza(toppingOne, toppingTwo, size) {
+function Pizza() {
   this.pizzas = {}
   this.id = 0;
 }
@@ -25,7 +25,7 @@ Pizza.prototype.findId = function(id) {
 
 //BI for CustomerInput
 
-function CustomerInput (toppingOne,toppingTwo,size ){
+function CustomerInput (toppingOne,toppingTwo,size){
   this.toppingOne = toppingOne;
   this.toppingTwo = toppingTwo;
   this.size = size;
@@ -68,8 +68,9 @@ $(document).ready(function() {
     const inputtedSize = $("#size").val();
     let newOrder = new CustomerInput(inputtedToppingOne, inputtedToppingTwo, inputtedSize);
     newOrder.orderPrice();
-    // let totalCost = [];
-    // totalCost.push(newOrder.price)
+    let totalCost = [];
+    totalCost.push(newOrder.price)
+    console.log(totalCost)
     let endPrice = ("<p> Your total is $" + newOrder.price + "</p>");
     let showOrder = ("<p> You're order is: a " +inputtedSize + " " +inputtedToppingOne + " " + inputtedToppingTwo + " Pizza.</p>")
     createTags(showOrder)
