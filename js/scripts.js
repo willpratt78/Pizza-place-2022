@@ -3,25 +3,25 @@
 function Pizza() {
   this.pizzas = {}
   this.id = 0;
-}
+};
 
 Pizza.prototype.addPizza = function (order) {
   order.id = this.addId();
   this.pizzas[order.id] = order
-}
+};
 
 
 Pizza.prototype.addId = function () {
   this.id += 1
   return this.id
-}
+};
 
 Pizza.prototype.findId = function(id) {
   if (this.pizzas[id] != undefined) {
     return this.pizzas[id];
   }
   return false;
-}
+};
 
 //BI for CustomerInput
 
@@ -30,7 +30,7 @@ function CustomerInput (toppingOne,toppingTwo,size){
   this.toppingTwo = toppingTwo;
   this.size = size;
   this.price = 0;
-}
+};
 
 CustomerInput.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
@@ -56,7 +56,7 @@ CustomerInput.prototype.orderPrice = function () {
     this.price +=6;
   }
   return this.price;
-}
+};
 
 // UI Logic
 
@@ -75,14 +75,14 @@ $(document).ready(function() {
     let showOrder = ("<p> You're order is: a " +inputtedSize + " " +inputtedToppingOne + " " + inputtedToppingTwo + " Pizza.</p>")
     createTags(showOrder)
     createTags(endPrice)
-  })
-}) 
+  });
+});
 
 function createTags(tag) {
   const div = document.createElement("div");
   $(div).append(tag);
   $("#output").append(div);
-}
+};
 
 // function displayPizzaOrder(pizzaOrder) {
 //   let yourOrder = $("#output");
