@@ -71,5 +71,5 @@ Describe: Pizza.prototype.orderPrice = function ()
 Text: "It should return the total price for the pizza ordered"
 Code:
 myPizza.orderPrice("anchovies", "pineapple", "large")
-Expected output: myPizza(15)
+Expected output: myPizza(17)
 ```

@@ -36,7 +36,7 @@ CustomerInput.prototype.orderPrice = function () {
   let toppingOne = this.toppingOne;
   let toppingTwo = this.toppingTwo;
   let size = this.size;
-  if (toppingOne === "Xtra-cheese" ||toppingOne ===  "Garlic" ||toppingOne ===  "Banana-peppers"){
+  if (toppingOne === "Xtra-cheese" ||toppingOne ===  "Anchovies" ||toppingOne ===  "Banana-peppers"){
     this.price += 2;
   }else {
     this.price += 0;
